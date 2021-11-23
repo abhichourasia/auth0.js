@@ -376,7 +376,7 @@ Authentication.prototype.oauthToken = function(options, cb) {
   });
   assert.check(cb, { type: 'function', message: 'cb parameter is not valid' });
 
-  url = urljoin(this.baseOptions.rootUrl, 'oauth', 'token');
+  url = urljoin(this.baseOptions.rootUrl, 'token');
 
   body = objectHelper
     .merge(this.baseOptions, ['clientID', 'scope', 'audience'])
